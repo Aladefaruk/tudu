@@ -1,12 +1,14 @@
-# Task Management Application
+# Todo-List Management Application
 
-This is a task management application built with React, allowing users to create, edit, delete, and move tasks between different lists with drag-and-drop functionality.
+A todo-list management application
 
 ## Features
 
-- Drag and drop tasks between lists
-- Add, edit, and delete tasks
+- Add tasks to todo-list
+- Mark task as complete/incomplete
+- Delete tasks from list
 - Persist data with local storage (or external storage)
+- Drag and drop tasks in lists
 - Responsive design
 
 ## Technologies Used
@@ -15,6 +17,7 @@ This is a task management application built with React, allowing users to create
 - react-beautiful-dnd (for drag-and-drop functionality)
 - Tailwind CSS (for styling)
 - JavaScript (ES6+)
+- TypeScript
 - Local Storage (for data storage)
 
 ## Getting Started
@@ -31,12 +34,12 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Aladefaruk/task-manager.git
+   git clone https://github.com/Aladefaruk/tudu.git
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd task-managent
+   cd tudu
 
 3. **Install dependencies:**
 
@@ -65,26 +68,19 @@ Ensure you have the following installed on your machine:
 
 ### Walkthrough the functionalities
 
-1. **To Create a new board**
+1. **To Add a new task**
 
-- Click on the "Add board +" button and enter board name
+- Enter task name into the input form field provided and click the "Add +" button
 
-2. **To Create a new list**
+2. **Toggling task as complete/incomplete**
 
-- Click on the "Add list +" button and enter list name
+- Toggle the check box infront of the task name to mark tasks as complete/incomplete
+  - For completed task, you will see a line through the task name
 
-3. **Moving lists**
+2. **Toggling task as complete/incomplete**
 
-- Reorder the lists horizontally by simply dragging them to whatever destination you want
+- Click the delete button to delete corresponding task
 
+3. **Tasks**
 
-4. **Moving Board**
-
-- Reorder the boards horizontally by simply dragging them to whatever destination you want
-
-5. **Tasks**
-
-- Reorder the tasks vertically by simply dragging them to whatever destination you want inside a particular list
-- Reorder the tasks horizontally across multiple lists by simply dragging them to whatever destination you want
-- Tasks can be edited and deleted
-- Priorities are also assigned to tasks
+- Reorder the tasks vertically by simply dragging the task up and down 
