@@ -77,9 +77,6 @@ Ensure you have the following installed on your machine:
 - Toggle the check box infront of the task name to mark tasks as complete/incomplete
   - For completed task, you will see a line through the task name
 
-2. **Toggling task as complete/incomplete**
-
-- Click the delete button to delete corresponding task
 
 3. **Tasks**
 

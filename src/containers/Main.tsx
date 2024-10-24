@@ -13,12 +13,14 @@ const Main = () => {
     name: "Todo",
     tasks: [] as TaskType[],
   });
+  const [loading, setLoading] = useState(false)
 
   // CallingJson place endpoint set in env file
   const API = process.env.REACT_APP_MOCKAPI
 
   //Get data from JSon placeholder
   const GetData = async () => {
+    setLoading(true)
     try {
       const res = await fetch(`${API}`, {
         method: "GET",
@@ -27,16 +29,18 @@ const Main = () => {
       const res_json = await res.json();
       console.log(res_json)
       if (!res.ok) {
+        setLoading(false)
 
         throw { success: false, data: res };
       }
+      setLoading(false)
       setList((prevList) => ({
         ...prevList,
         tasks: [{ ...res_json, _id: `task-${Date.now()}` }],
       }))
       return
     } catch (error) {
-
+      setLoading(false)
       return { success: false, data: "Netwrok error" };
     }
   }
@@ -118,6 +122,7 @@ const Main = () => {
               className="flex flex-col w-full h-full pt-1"
             >
               <List
+                loading={loading}
                 list={list}
                 handleTaskAddition={handleTaskAddition}
                 handleDeleteTask={handleDeleteTask}

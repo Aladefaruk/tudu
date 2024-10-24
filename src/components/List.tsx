@@ -9,6 +9,7 @@ interface TaskType {
 }
 
 interface ListProps {
+  loading: boolean,
   list: {
     name: string;
     tasks: TaskType[];
@@ -19,6 +20,7 @@ interface ListProps {
 }
 
 const List: React.FC<ListProps> = ({
+  loading,
   list,
   handleTaskAddition,
   handleDeleteTask,
@@ -67,7 +69,10 @@ const List: React.FC<ListProps> = ({
 
           <p className="mt-10 mb-5 text-[#fff]">You can prioritize task by dragging them up or down on the list 😉</p>
           <div className="border-[0.5px] border-[#fff] rounded-md p-3 -10">
-            {list.tasks.map((task, index) => (
+            {
+              loading ? <h1 className="text-[#fff] font-[500] flex text-center py-5">Loading...</h1> :
+
+                list.tasks.length === 0 ? <h1 className="text-[#fff] font-[500] flex text-center py-5">No Task Added</h1> : list.tasks.map((task, index) => (
               <Draggable key={task._id} draggableId={task._id} index={index}>
                 {(provided) => (
                   <div
