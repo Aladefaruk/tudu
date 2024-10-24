@@ -106,7 +106,7 @@ const Main = () => {
   return (
     <div className="bg-[#fff] h-[100vh]">
       <div className="bg-[#323232] p-5 text-[18px] lg:text-[24px] w-full text-center shadow-2xl">
-        <h2 className="text-[#fff] text-[30px] lg:text-[50px]">TUDU</h2>
+        <h2 className="text-[#fff] text-[30px] lg:text-[50px]">TUUDU</h2>
       </div>
 
       <DragDropContext onDragEnd={handleDragEnd}>
